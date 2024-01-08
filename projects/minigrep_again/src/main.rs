@@ -7,6 +7,7 @@ fn main() {
 
     let query = &args[1];
     let file_path = &args[2];
+    let config = Config {query: args[1].clone(), file_path: args[2].clone()};
 
     println!("searching for {}", query);
     println!("In file {}", file_path);
@@ -17,4 +18,9 @@ fn main() {
     println!("With text: \n{contents}");
 
 
+}
+
+struct Config {
+    query: String,
+    file_path: String,
 }
